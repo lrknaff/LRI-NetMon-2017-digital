@@ -31,11 +31,6 @@
 		this.__banner = $("#banner");
 		this.__content = $("#content");
 
-		this.__heroWrapper = $("#hero-wrapper");
-
-		this.__ornateTop = $("#ornate-top");
-		this.__ornateBottom = $("#ornate-bottom");
-
 		this.__bgExit = $("#bg-exit");
 	};
 
@@ -69,50 +64,75 @@
 		let copy2Scene = anime.timeline();
 		let copy3Scene = anime.timeline();
 		let finalScene = anime.timeline();
+		let banner = this;
 
     scene1
       .add({
-        targets: '#hero',
-        opacity: 1,
+				targets: '.cls-3',
+				easing: 'easeOutExpo',
+				scale: [0, 1],
+				opacity: 1,
 				offset: 0
       })
       .add({
-				targets: '#ornate-top',
-				translateY: 20,
+				targets: '.cls-4',
 				easing: 'easeOutExpo',
+				scale: [0, 1],
 				opacity: 1,
-				offset: 0
+				offset: 50
       })
-			.add({
-				targets: '#ornate-bottom',
-				translateY: -75,
+      .add({
+				targets: '.cls-5',
 				easing: 'easeOutExpo',
+				scale: [0, 1],
 				opacity: 1,
-				offset: 0
-			})
-			.add({
-				targets: '#hero',
-				scale: {
-					value: [1, 1.1],
-					duration: 6700,
-					easing: 'linear',
-				},
-			});
+				offset: 100
+      })
+      .add({
+				targets: '.cls-6',
+				easing: 'easeOutExpo',
+				scale: [0, 1],
+				opacity: 1,
+				offset: 150
+      })
+      .add({
+				targets: '.cls-7',
+				easing: 'easeOutExpo',
+				scale: [0, 1],
+				opacity: 1,
+				offset: 200
+      })
+      .add({
+				targets: '.cls-8',
+				easing: 'easeOutExpo',
+				scale: [0, 1],
+				opacity: 1,
+				offset: 250
+      })
+      .add({
+				targets: '.cls-9',
+				easing: 'easeOutExpo',
+				scale: [0, 1],
+				opacity: 1,
+				offset: 300
+      });
 
 			copy1Scene
 			.add({
 				targets: '#copy01',
 				translateY: -156,
+				easing: 'easeInOutCubic',
 				opacity: 1,
 				elasticity: 100,
-				offset: 400
+				offset: 600
 			})
 			.add({
 				targets: '#copy02',
 				translateY: -122,
+				easing: 'easeInOutCubic',
 				elasticity: 100,
 				opacity: 1,
-				offset: 500
+				offset: 800
 			})
 			.add({
 				targets: '#copy01',
@@ -131,18 +151,25 @@
 
 		copy2Scene
 			.add({
+				targets: '#copy-mask',
+				background: '#FFFFFF',
+				offset: 4000
+			})
+			.add({
 				targets: '#copy03',
-				translateY: -154,
+				translateY: -147,
+				easing: 'easeInOutCubic',
 				opacity: 1,
 				elasticity: 100,
-				offset: 3500
+				offset: 4100
 			})
 			.add({
 				targets: '#copy04',
-				translateY: -124,
+				translateY: -116,
+				easing: 'easeInOutCubic',
 				elasticity: 100,
 				opacity: 1,
-				offset: 3600
+				offset: 4200
 			})
 			.add({
 				targets: '#copy03',
@@ -159,73 +186,76 @@
 				offset: 6200
 			});
 
-		copy3Scene
-			.add({
-				targets: '#copy05',
-				translateY: -152,
-				opacity: 1,
-				elasticity: 100,
-				offset: 6600
-			})
-			.add({
-				targets: '#copy06',
-				translateY: -120,
-				elasticity: 100,
-				opacity: 1,
-				offset: 6700
-			})
-			.add({
-				targets: '#ornate-top',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9200
-			})
-			.add({
-				targets: '#copy05',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9300
-			})
-			.add({
-				targets: '#copy06',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9400
-			})
-			.add({
-				targets: '#ornate-bottom',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9500
-			});
-
-
 		finalScene
-			.add({
-				targets: '#logo-ecu',
-				translateY: -150,
-				opacity: 1,
-				elasticity: 100,
-				offset: 9900
-			})
-			.add({
-				targets: '#cta',
-				translateY: -69,
-				elasticity: 100,
-				opacity: 1,
-				offset: 10000
-			});
+		.add({
+			targets: '.cls-3',
+			easing: 'easeOutExpo',
+			scale: [1, 0],
+			opacity: 0,
+			offset: 7000
+		})
+		.add({
+			targets: '.cls-4',
+			easing: 'easeOutExpo',
+			scale: [1, 0],
+			opacity: 0,
+			offset: 7050
+		})
+		.add({
+			targets: '.cls-5',
+			easing: 'easeOutExpo',
+			scale: [1, 0],
+			opacity: 0,
+			offset: 7100
+		})
+		.add({
+			targets: '.cls-6',
+			easing: 'easeOutExpo',
+			scale: [1, 0],
+			opacity: 0,
+			offset: 7150
+		})
+		.add({
+			targets: '.cls-7',
+			easing: 'easeOutExpo',
+			scale: [1, 0],
+			opacity: 0,
+			offset: 7200
+		})
+		.add({
+			targets: '.cls-8',
+			easing: 'easeOutExpo',
+			scale: [1, 0],
+			opacity: 0,
+			offset: 7250
+		})
+		.add({
+			targets: '.cls-9',
+			easing: 'easeOutExpo',
+			scale: [1, 0],
+			opacity: 0,
+			offset: 7300
+		})
+		.add({
+			targets: '#logo-log',
+			opacity: 1,
+			easing: 'easeInOutCubic',
+			offset: 8000
+		})
+		.add({
+			targets: '#black-hat',
+			easing: 'easeInOutCubic',
+			opacity: 1,
+			offset: 8500
+		})
+		.add({
+			targets: '#cta',
+			easing: 'easeInOutCubic',
+			opacity: 1,
+			offset: 9500
+		});
 
-		// var banner = this;
-		// setTimeout(function(){banner.end();}, 2500);
+		setTimeout(function(){banner.end();}, 9500);
 
 	};
 
@@ -275,12 +305,22 @@
 
 	Banner.prototype.onMouseOver = function()
 	{
-		animate(0, this.__ctaHover, {opacity:1}, 500, "easeOutQuad");
+		let hoverEffect = anime.timeline();
+		hoverEffect
+			.add ({
+					targets: '#copy-mask',
+					background: '#007dc3',
+			});
 	};
 
 	Banner.prototype.onMouseOut = function()
 	{
-		animate(25, this.__ctaHover, {opacity:0}, 200, "easeOutQuad");
+		let hoverEffect = anime.timeline();
+		hoverEffect
+			.add ({
+					targets: '#copy-mask',
+					background: '#FFFFFF',
+			});
 	};
 
 	Banner.prototype.clickThrough = function()
