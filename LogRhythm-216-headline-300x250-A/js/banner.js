@@ -176,14 +176,14 @@
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 6100
+				offset: 6700
 			})
 			.add({
 				targets: '#copy04',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 6200
+				offset: 6800
 			});
 
 		finalScene
@@ -192,49 +192,49 @@
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7000
+			offset: 7300
 		})
 		.add({
 			targets: '.cls-4',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7050
+			offset: 7350
 		})
 		.add({
 			targets: '.cls-5',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7100
+			offset: 7400
 		})
 		.add({
 			targets: '.cls-6',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7150
+			offset: 7450
 		})
 		.add({
 			targets: '.cls-7',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7200
+			offset: 7500
 		})
 		.add({
 			targets: '.cls-8',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7250
+			offset: 7550
 		})
 		.add({
 			targets: '.cls-9',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7300
+			offset: 7600
 		})
 		.add({
 			targets: '#logo-log',
