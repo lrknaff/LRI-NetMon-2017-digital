@@ -38,6 +38,7 @@
       .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 { opacity: 0; transform-origin: center center;}
 
       #copy-mask { overflow: hidden; width: 300px; height: 90px; position: absolute; top: 80px; background-color: #142e54;}
+      #background-color { width: 300px; height: 90px; background-color: #007dc3; opacity: 0}
 
 			#copy01 { background: transparent url('images/sprite.png') no-repeat 0 -1px; height: 34px; top: 160px; opacity: 0;}
 			#copy02 { background: transparent url('images/sprite.png') no-repeat 0 -40px; height: 51px;  top: 160px; opacity: 0;}
@@ -94,6 +95,7 @@
             </div>
 
             <div id="copy-mask">
+              <div id = "background-color" class = "animated-content"></div>
               <div id = "copy02" class = "animated-content"></div>
               <div id = "copy01" class = "animated-content"></div>
 
@@ -120,7 +122,7 @@
 		<script src="js/banner.js"></script>
 		<script type="text/javascript">
 
-			var clickTag = "https://www.logrhythm.com/";
+			var clickTag = "https://logrhythm.com/network-monitor-freemium/";
 
 			$(document).ready(function()
 			{

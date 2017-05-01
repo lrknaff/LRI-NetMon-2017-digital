@@ -30,6 +30,7 @@
 		this.__border = $("#border");
 		this.__banner = $("#banner");
 		this.__content = $("#content");
+		this.__backgroundHover = $("#background-color");
 
 		this.__bgExit = $("#bg-exit");
 	};
@@ -305,22 +306,12 @@
 
 	Banner.prototype.onMouseOver = function()
 	{
-		let hoverEffect = anime.timeline();
-		hoverEffect
-			.add ({
-					targets: '#copy-mask',
-					background: '#007dc3',
-			});
+		this.__backgroundHover.animate({ opacity: 1 }, 300);
 	};
 
 	Banner.prototype.onMouseOut = function()
 	{
-		let hoverEffect = anime.timeline();
-		hoverEffect
-			.add ({
-					targets: '#copy-mask',
-					background: '#FFFFFF',
-			});
+			this.__backgroundHover.animate({ opacity: 0 }, 200);
 	};
 
 	Banner.prototype.clickThrough = function()
