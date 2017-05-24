@@ -11,8 +11,8 @@
 	{
 		this.__allowHoverEffect = false;
 		this.__loopCount = 0;
-		this.__width = 300;
-		this.__height = 250;
+		this.__width = 728;
+		this.__height = 90;
 		this.start();
 	};
 
@@ -30,7 +30,7 @@
 		this.__border = $("#border");
 		this.__banner = $("#banner");
 		this.__content = $("#content");
-		this.__backgroundHover = $("#background-color");
+		this.__backgroundHover = $("#background-hover");
 
 		this.__bgExit = $("#bg-exit");
 	};
@@ -121,19 +121,11 @@
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -156,
+				translateY: -68,
 				easing: 'easeInOutCubic',
 				opacity: 1,
 				elasticity: 100,
 				offset: 600
-			})
-			.add({
-				targets: '#copy02',
-				translateY: -122,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				opacity: 1,
-				offset: 800
 			})
 			.add({
 				targets: '#copy01',
@@ -142,49 +134,43 @@
 				elasticity: 100,
 				offset: 3000
 			})
+
+		copy2Scene
+			.add({
+				targets: '#background-color',
+				background: '#FFFFFF',
+				offset: 3800,
+				duration: 1000
+			})
+			.add({
+				targets: '#copy02',
+				translateY: -109,
+				easing: 'easeInOutCubic',
+				opacity: 1,
+				elasticity: 100,
+				offset: 4400
+			})
+			.add({
+				targets: '#copy03',
+				translateY: -56,
+				easing: 'easeInOutCubic',
+				opacity: 1,
+				elasticity: 100,
+				offset: 4600
+			})
 			.add({
 				targets: '#copy02',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 3100
-			});
-
-		copy2Scene
-			.add({
-				targets: '#copy-mask',
-				background: '#FFFFFF',
-				offset: 4000
-			})
-			.add({
-				targets: '#copy03',
-				translateY: -147,
-				easing: 'easeInOutCubic',
-				opacity: 1,
-				elasticity: 100,
-				offset: 4100
-			})
-			.add({
-				targets: '#copy04',
-				translateY: -116,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				opacity: 1,
-				offset: 4200
+				offset: 7100
 			})
 			.add({
 				targets: '#copy03',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 6700
-			})
-			.add({
-				targets: '#copy04',
-				translateY: -1000,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 6800
+				offset: 7200
 			});
 
 		finalScene
@@ -193,61 +179,61 @@
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7300
+			offset: 7700
 		})
 		.add({
 			targets: '.cls-4',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7350
+			offset: 7750
 		})
 		.add({
 			targets: '.cls-5',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7400
+			offset: 7800
 		})
 		.add({
 			targets: '.cls-6',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7450
+			offset: 7850
 		})
 		.add({
 			targets: '.cls-7',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7500
+			offset: 7900
 		})
 		.add({
 			targets: '.cls-8',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7550
+			offset: 7950
 		})
 		.add({
 			targets: '.cls-9',
 			easing: 'easeOutExpo',
 			scale: [1, 0],
 			opacity: 0,
-			offset: 7600
+			offset: 8000
 		})
 		.add({
 			targets: '#logo-log',
 			opacity: 1,
 			easing: 'easeInOutCubic',
-			offset: 8000
+			offset: 8050
 		})
 		.add({
 			targets: '#black-hat',
 			easing: 'easeInOutCubic',
 			opacity: 1,
-			offset: 8500
+			offset: 8700
 		})
 		.add({
 			targets: '#cta',
@@ -316,7 +302,7 @@
 
 	Banner.prototype.clickThrough = function()
 	{
-		// trace("click through: " + window.clickTag);
+		trace("click through: " + window.clickTag);
 		window.open(window.clickTag)
 
 		//var ID = "Background Exit";
