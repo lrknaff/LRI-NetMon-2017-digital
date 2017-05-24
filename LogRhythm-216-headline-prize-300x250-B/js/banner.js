@@ -316,7 +316,7 @@
 
 	Banner.prototype.clickThrough = function()
 	{
-		// trace("click through: " + window.clickTag);
+		trace("click through: " + window.clickTag);
 		window.open(window.clickTag)
 
 		//var ID = "Background Exit";

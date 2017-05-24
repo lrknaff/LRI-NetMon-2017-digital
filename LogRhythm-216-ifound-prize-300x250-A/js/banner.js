@@ -121,7 +121,7 @@
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -156,
+				translateY: -158,
 				easing: 'easeInOutCubic',
 				opacity: 1,
 				elasticity: 100,
@@ -129,35 +129,52 @@
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -122,
+				translateY: -124,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				opacity: 1,
 				offset: 800
 			})
 			.add({
+				targets: '#copy03',
+				translateY: -88,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				opacity: 1,
+				offset: 1000
+			})
+			.add({
 				targets: '#copy01',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 3000
+				offset: 3100
 			})
 			.add({
 				targets: '#copy02',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 3100
+				offset: 3200
+			})
+			.add({
+				targets: '#copy03',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 3300
 			});
 
 		copy2Scene
 			.add({
 				targets: '#copy-mask',
+				height: 90,
+				top: 80,
 				background: '#FFFFFF',
 				offset: 4000
 			})
 			.add({
-				targets: '#copy03',
+				targets: '#copy04',
 				translateY: -147,
 				easing: 'easeInOutCubic',
 				opacity: 1,
@@ -165,7 +182,7 @@
 				offset: 4100
 			})
 			.add({
-				targets: '#copy04',
+				targets: '#copy05',
 				translateY: -116,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
@@ -173,14 +190,14 @@
 				offset: 4200
 			})
 			.add({
-				targets: '#copy03',
+				targets: '#copy04',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				offset: 6700
 			})
 			.add({
-				targets: '#copy04',
+				targets: '#copy05',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
@@ -316,7 +333,7 @@
 
 	Banner.prototype.clickThrough = function()
 	{
-		// trace("click through: " + window.clickTag);
+		trace("click through: " + window.clickTag);
 		window.open(window.clickTag)
 
 		//var ID = "Background Exit";
